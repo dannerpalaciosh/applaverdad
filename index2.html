@@ -162,8 +162,8 @@
             var intervalo = moment(duracion);
         
             var diaDelMes = intervalo.date();
-            var hora = intervalo.hour()-17;
-            var minuto = intervalo.minute()+9;
+            var hora = intervalo.hour()-9;
+            var minuto = intervalo.minute()+1;
             var segundo = intervalo.second();
             var resultado = (intervalo.format("MM/DD HH:mm:ss"));
             $("#resultado").html( diaDelMes + " Días " + hora + " Horas " + minuto + " Minutos " + segundo + " Segundos");
