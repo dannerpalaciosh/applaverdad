@@ -69,6 +69,25 @@
           border-top: 3px solid red;
           margin: 5%;
       }
+    
+        #resultado{
+            font-size: 40px;
+            
+        }
+
+        #timer{
+            border: 3px solid red;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+        }
+
+        #timetext{
+            text-align: center;
+            color: white;
+            font-size: 25px;
+
+        }
   </style>
   <body>
 
@@ -106,6 +125,14 @@
       
     </div>
   </nav>
+    
+   <div class="container-fluid expand-lg">
+     <h3 id="timetext">Tiempo Restante para Elecciones Generales:</h3>
+        <div id="timer">
+            <div id="resultado">
+        </div>
+     
+    </div>
  <rssapp-wall id="5h4SRWny3zZlQNiT"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
         
 
@@ -121,6 +148,24 @@
 
   </body>
 </html>
+
+<script type="text/javascript"> 
+        var final = moment("2021-11-28");
+        setInterval(function() {
+            var inicio = moment();
+            var duracion = final.diff(inicio);
+            var intervalo = moment(duracion);
+            var mes = intervalo.month()+1;
+            var diaDelMes = intervalo.date();
+            var hora = intervalo.hour()-17;
+            var minuto = intervalo.minute()+1;
+            var segundo = intervalo.second();
+            var resultado = (intervalo.format("MM/DD HH:mm:ss"));
+            $("#resultado").html( diaDelMes + " Dias " + hora + " Horas " + minuto + " Minutos " + segundo + " Segundos");
+            
+        }, 1000);
+      
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script>
